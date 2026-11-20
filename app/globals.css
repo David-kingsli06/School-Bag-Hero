@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Taste skill palette */
+  --bg-classroom: #14100e;
+  --text-warm-white: #f3ede3;
+  --text-amber: #c8843a;
+  --accent-color: #d97736;
+}
+
+@theme inline {
+  --color-classroom: var(--bg-classroom);
+  --color-warm-white: var(--text-warm-white);
+  --color-amber-warm: var(--text-amber);
+  --color-accent: var(--accent-color);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+body {
+  background-color: var(--bg-classroom);
+  color: var(--text-warm-white);
+  font-family: var(--font-sans), sans-serif;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom hairline progress animation */
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
